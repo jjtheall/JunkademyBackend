@@ -1,12 +1,15 @@
 package com.csc492;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
-//Unsure if EntityScan is the right thiing to use here
-@EntityScan
+@Entity
+@Table(name="Users")
 public class UserClass {
 
     //Instance variables
+	@Id
     int user_id;
     String username;
     String password;

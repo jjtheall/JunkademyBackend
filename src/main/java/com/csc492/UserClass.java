@@ -1,5 +1,6 @@
 package com.csc492;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -10,14 +11,58 @@ public class UserClass {
 
     //Instance variables
 	@Id
-    int user_id;
-    String username;
-    String password;
-    boolean admin;
-    boolean basicChal1, basicChal2, basicChal3;
-    boolean stringChal1, stringChal2, stringChal3;
-    boolean arrayChal1, arrayChal2, arrayChal3;
-    boolean boolChal1, boolChal2, boolChal3;
+    @Column(name = "user_id")
+    private int user_id;
+    
+    @Column(name = "username")
+    private String username;
+
+    @Column(name = "password")
+    private String password;
+
+    @Column(name = "admin")
+    private boolean admin;
+
+    @Column(name = "basicChal1")
+    private boolean basicChal1;
+
+    @Column(name = "basicChal2")
+    private boolean basicChal2;
+
+    @Column(name = "basicChal3")
+    private boolean basicChal3;
+
+    @Column(name = "stringChal1")
+    private boolean stringChal1;
+
+    @Column(name = "stringChal2")
+    private boolean stringChal2;
+
+    @Column(name = "stringChal3")
+    private boolean stringChal3;
+
+    @Column(name = "arrayChal1")
+    private boolean arrayChal1;
+
+    @Column(name = "arrayChal2")
+    private boolean arrayChal2;
+
+    @Column(name = "arrayChal3")
+    private boolean arrayChal3;
+
+    @Column(name = "boolChal1")
+    private boolean boolChal1;
+
+    @Column(name = "boolChal2")
+    private boolean boolChal2;
+
+    @Column(name = "boolChal3")
+    private boolean boolChal3;
+
+
+    public UserClass() {
+        super();
+    }
 
     //Constructor if needed
     public UserClass(int user_id, String username, String password, boolean admin, boolean basicChal1, boolean basicChal2, boolean basicChal3,

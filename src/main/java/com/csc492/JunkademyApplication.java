@@ -9,6 +9,5 @@ public class JunkademyApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(JunkademyApplication.class, args);
 	}
-	
 
 }

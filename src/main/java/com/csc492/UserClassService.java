@@ -1,5 +1,7 @@
 package com.csc492;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +13,10 @@ public class UserClassService {
 	
 	public UserClass fetchUserByName(String username) {
 		return userClassRepo.fetchUserByName(username);
+	}
+	
+	public List<UserClass> fetchAllUsers() {
+		return (List<UserClass>)userClassRepo.findAll();
 	}
 	
 	public UserClass saveUser(UserClassDTO userClassDTO) {

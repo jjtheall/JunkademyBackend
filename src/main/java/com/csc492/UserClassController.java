@@ -18,6 +18,13 @@ public class UserClassController {
 	private UserClassService userClassService;
 	
 	@GetMapping
+	@RequestMapping(path="/user/login")
+	@ResponseStatus(HttpStatus.OK)
+	public boolean loginUser(@RequestBody UserLoginDTO userLoginDTO) {
+		return userClassService.loginUser(userLoginDTO);
+	}
+	
+	@GetMapping
 	@RequestMapping(path="/user/get")
 	@ResponseStatus(HttpStatus.OK)
 	public UserClass fetchUserByName(String username) {
@@ -34,8 +41,8 @@ public class UserClassController {
 	@PostMapping
 	@RequestMapping(path="/user/save")
 	@ResponseStatus(HttpStatus.OK)
-	public UserClass saveUser(@RequestBody UserClassDTO userClassDTO) {
-		return userClassService.saveUser(userClassDTO);
+	public UserClass saveUser(@RequestBody UserLoginDTO userLoginDTO) {
+		return userClassService.saveUser(userLoginDTO);
 	}
 	
 	

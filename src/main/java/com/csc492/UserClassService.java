@@ -11,6 +11,11 @@ public class UserClassService {
 	@Autowired
 	private UserClassRepo userClassRepo;
 	
+	public boolean loginUser(UserLoginDTO userLoginDTO) {
+		String username = userClassRepo.loginUser(userLoginDTO.getUsername(), userLoginDTO.getPassword());
+		return username != null;
+	}
+	
 	public UserClass fetchUserByName(String username) {
 		return userClassRepo.fetchUserByName(username);
 	}
@@ -19,13 +24,18 @@ public class UserClassService {
 		return (List<UserClass>)userClassRepo.findAll();
 	}
 	
-	public UserClass saveUser(UserClassDTO userClassDTO) {
+	public UserClass saveUser(UserLoginDTO userLoginDTO) {
 		UserClass user = new UserClass();
-		user.setUser_Id(userClassDTO.getUser_id());
-		user.setUserName(userClassDTO.getUsername());
-		user.setPassword(userClassDTO.getPassword());
+		user.setUserName(userLoginDTO.getUsername());
+		user.setPassword(userLoginDTO.getPassword());
 		
-		return userClassRepo.save(user);
+		String existingUsername = userClassRepo.loginUser(userLoginDTO.getUsername(),userLoginDTO.getPassword());
+		if(existingUsername == null) {
+			return userClassRepo.save(user);
+		}
+		else {
+			return null;
+		}
 	}
 
 }

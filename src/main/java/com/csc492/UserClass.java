@@ -11,9 +11,6 @@ public class UserClass {
 
     //Instance variables
 	@Id
-    @Column(name = "user_id")
-    private int user_id;
-    
     @Column(name = "username")
     private String username;
 
@@ -65,11 +62,10 @@ public class UserClass {
     }
 
     //Constructor if needed
-    public UserClass(int user_id, String username, String password, boolean admin, boolean basicChal1, boolean basicChal2, boolean basicChal3,
+    public UserClass(String username, String password, boolean admin, boolean basicChal1, boolean basicChal2, boolean basicChal3,
     boolean stringChal1, boolean stringChal2, boolean stringChal3, boolean arrayChal1, boolean arrayChal2, boolean arrayChal3,
     boolean boolChal1, boolean boolChal2, boolean boolChal3) {
 
-        this.user_id = user_id;
         this.username = username;
         this.password = password;
         this.admin = admin;
@@ -88,10 +84,6 @@ public class UserClass {
     }
 
     //Getters
-    public int getUser_Id() {
-        return user_id;
-    }
-
     public String getUserName() {
         return username;
     }
@@ -153,10 +145,6 @@ public class UserClass {
     }
 
     //Setters
-    public void setUser_Id(int userId) {
-        user_id = userId;
-    }
-
     public void setUserName(String userName) {
         username = userName;
     }

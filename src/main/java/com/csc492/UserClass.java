@@ -11,49 +11,49 @@ public class UserClass {
 
     //Instance variables
 	@Id
-    @Column(name = "username")
+    @Column(name = "username", nullable = false)
     private String username;
 
-    @Column(name = "password")
+    @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "admin")
+    @Column(name = "admin", nullable = false)
     private boolean admin;
 
-    @Column(name = "basicChal1")
+    @Column(name = "basicChal1", nullable = false)
     private boolean basicChal1;
 
-    @Column(name = "basicChal2")
+    @Column(name = "basicChal2", nullable = false)
     private boolean basicChal2;
 
-    @Column(name = "basicChal3")
+    @Column(name = "basicChal3", nullable = false)
     private boolean basicChal3;
 
-    @Column(name = "stringChal1")
+    @Column(name = "stringChal1", nullable = false)
     private boolean stringChal1;
 
-    @Column(name = "stringChal2")
+    @Column(name = "stringChal2", nullable = false)
     private boolean stringChal2;
 
-    @Column(name = "stringChal3")
+    @Column(name = "stringChal3", nullable = false)
     private boolean stringChal3;
 
-    @Column(name = "arrayChal1")
+    @Column(name = "arrayChal1", nullable = false)
     private boolean arrayChal1;
 
-    @Column(name = "arrayChal2")
+    @Column(name = "arrayChal2", nullable = false)
     private boolean arrayChal2;
 
-    @Column(name = "arrayChal3")
+    @Column(name = "arrayChal3", nullable = false)
     private boolean arrayChal3;
 
-    @Column(name = "boolChal1")
+    @Column(name = "boolChal1", nullable = false)
     private boolean boolChal1;
 
-    @Column(name = "boolChal2")
+    @Column(name = "boolChal2", nullable = false)
     private boolean boolChal2;
 
-    @Column(name = "boolChal3")
+    @Column(name = "boolChal3", nullable = false)
     private boolean boolChal3;
 
 

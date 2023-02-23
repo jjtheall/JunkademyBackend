@@ -30,11 +30,8 @@ public class CodeBlockController {
 	public List<CodeBlock> codeBlockTest() {
 		List<CodeBlock> blockList = new ArrayList<CodeBlock>();
 		
-		blockList.add(new CodeBlock(1));
-		blockList.add(new CodeBlock(2));
-		blockList.add(new CodeBlock(3));
-		blockList.add(new CodeBlock(4));
-		blockList.add(new CodeBlock(5));
+		//TODO: populate blockList with an instance of each code block subclass
+		//use empty constructor for each block
 		
 		return blockList;
 	}

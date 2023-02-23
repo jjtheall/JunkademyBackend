@@ -32,7 +32,25 @@ public class CodeBlockController {
 		
 		//TODO: populate blockList with an instance of each code block subclass
 		//use empty constructor for each block
-		
+		blockList.add(new ElseBlock());
+		blockList.add(new IfBlock());
+		blockList.add(new OpAddBlock());
+		blockList.add(new OpAndBlock());
+		blockList.add(new OpDivBlock());
+		blockList.add(new OpEqualsBlock());
+		blockList.add(new OpGreaterBlock());
+		blockList.add(new OpLessBlock());
+		blockList.add(new OpMultBlock());
+		blockList.add(new OpNotBlock());
+		blockList.add(new OpOrBlock());
+		blockList.add(new OpSubBlock());
+		blockList.add(new PrintBlock());
+		blockList.add(new VarBoolBlock());
+		blockList.add(new VarCharBlock());
+		blockList.add(new VarIntBlock());
+		blockList.add(new VarStringBlock());
+		blockList.add(new WhileLoopBlock());
+
 		return blockList;
 	}
 	

@@ -1,0 +1,18 @@
+
+
+public class AuthService() {
+
+    public AuthService() {
+        // Need to create an empty object from a function that connects to the database
+        //FYI this is another way to go about checking credentials, it might be better to stick to the UserClassController 
+        //method
+    }
+
+    public boolean authenticateUser(Strring username, String password) {
+        UserClass user = new UserClass.getUserName(username);
+        if(user == null) {
+            return false;
+        }
+        return user.getPassword().equals(password);
+    }
+}

@@ -7,7 +7,7 @@ public class PrintBlock extends CodeBlock{
 	}
 	
 	public PrintBlock(String parameter) {
-		super("print", "System.out.println(\"",parameter,"\");","");
+		super("print", "System.out.println(",parameter,");","");
 	}
 
 }

@@ -9,6 +9,8 @@ public class CodeBlockService {
 	
 	//TODO: remove static from translateCodeBlocks
 	//		remove main function
+	//		refactor operators in switch
+	//		code multiline blocks
 	
 	public static String translateCodeBlocks(List<CodeBlock> codeBlocks) {
 		//algorithm for converting blocks to text file

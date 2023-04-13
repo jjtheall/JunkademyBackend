@@ -49,6 +49,7 @@ public class CodeBlockController {
 		blockList.add(new VarStringBlock());
 		blockList.add(new WhileLoopBlock());
 		blockList.add(new ForLoopBlock());
+		blockList.add(new MultiLineBlock());
 		
 		return blockList;
 	}

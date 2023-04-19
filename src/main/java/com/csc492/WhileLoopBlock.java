@@ -6,8 +6,8 @@ public class WhileLoopBlock extends CodeBlock{
 		super("while","while(","","){","}");
 	}
 	
-	public WhileLoopBlock(String parameter, String executable) {
-		super("while","while(",parameter,"){",executable + "}");
+	public WhileLoopBlock(String parameter) {
+		super("while","while(",parameter,"){","");
 	}
 
 }

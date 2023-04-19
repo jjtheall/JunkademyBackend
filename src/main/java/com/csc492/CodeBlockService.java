@@ -14,7 +14,7 @@ public class CodeBlockService {
 	
 	public static String translateCodeBlocks(List<CodeBlock> codeBlocks) {
 		//algorithm for converting blocks to text file
-		String result = "public class App {\n\tpublic static void main(String[] args) {\n\t\t";
+		String result = "public class App {\n\tpublic static void main(String[] args) {\n";
 		
 		int intVars = 0;
 		int doubleVars = 0;
@@ -28,7 +28,12 @@ public class CodeBlockService {
 		List<String> charVarNames = new ArrayList<String>();
 		List<String> stringVarNames = new ArrayList<String>();
 		
+		int indentCounter = 2;
+		
 		for(int i=0; i<codeBlocks.size(); i++) {
+			for(int j=0; j<indentCounter; j++) {
+				result += "\t";
+			}
 			CodeBlock curBlock = codeBlocks.get(i);
 			switch(curBlock.getId()) {
 			case "print":
@@ -41,7 +46,7 @@ public class CodeBlockService {
 				}
 				result += curBlock.getPostCode();
 				result += curBlock.getExecutable();
-				result += "\n\t\t";
+				result += "\n";
 				break;
 			case "int":
 				result += curBlock.getPreCode();
@@ -51,7 +56,7 @@ public class CodeBlockService {
 				result += curBlock.getParameter();
 				result += curBlock.getPostCode();
 				result += curBlock.getExecutable();
-				result += "\n\t\t";
+				result += "\n";
 				break;
 			case "double":
 				result += curBlock.getPreCode();
@@ -61,7 +66,7 @@ public class CodeBlockService {
 				result += curBlock.getParameter();
 				result += curBlock.getPostCode();
 				result += curBlock.getExecutable();
-				result += "\n\t\t";
+				result += "\n";
 				break;
 			case "bool":
 				result += curBlock.getPreCode();
@@ -71,7 +76,7 @@ public class CodeBlockService {
 				result += curBlock.getParameter();
 				result += curBlock.getPostCode();
 				result += curBlock.getExecutable();
-				result += "\n\t\t";
+				result += "\n";
 				break;
 			case "char":
 				result += curBlock.getPreCode();
@@ -81,7 +86,7 @@ public class CodeBlockService {
 				result += curBlock.getParameter();
 				result += curBlock.getPostCode();
 				result += curBlock.getExecutable();
-				result += "\n\t\t";
+				result += "\n";
 				break;
 			case "string":
 				result += curBlock.getPreCode();
@@ -91,45 +96,49 @@ public class CodeBlockService {
 				result += curBlock.getParameter();
 				result += curBlock.getPostCode();
 				result += curBlock.getExecutable();
-				result += "\n\t\t";
+				result += "\n";
 				break;
 			case "if":
+				indentCounter++;
+				result += curBlock.getPreCode();
+				result += curBlock.getParameter();
+				result += curBlock.getPostCode();
+				result += "\n";
 				break;
 			case "else":
+				indentCounter++;
+				result += curBlock.getPreCode();
+				result += "\n";
 				break;
 			case "for":
+				indentCounter++;
+				result += curBlock.getPreCode();
+				result += curBlock.getParameter();
+				result += curBlock.getPostCode();
+				result += "\n";
 				break;
 			case "while":
-				break;
-			case "addition":
+				indentCounter++;
+				result += curBlock.getPreCode();
 				result += curBlock.getParameter();
+				result += curBlock.getPostCode();
+				result += "\n";
 				break;
-			case "subtraction":
-				result += curBlock.getParameter();
+			case "endif":
+				indentCounter--;
+				result = result.substring(0, result.lastIndexOf("\t")) + "}\n";
 				break;
-			case "multiplication":
-				result += curBlock.getParameter();
+			case "endelse":
+				indentCounter--;
+				result = result.substring(0, result.lastIndexOf("\t")) + "}\n";
 				break;
-			case "division":
-				result += curBlock.getParameter();
+			case "endfor":
+				indentCounter--;
+				result = result.substring(0, result.lastIndexOf("\t")) + "}\n";
 				break;
-			case "and":
-				result += curBlock.getParameter();
-				break;
-			case "or":
-				result += curBlock.getParameter();
-				break;
-			case "equals":
-				result += curBlock.getParameter();
-				break;
-			case "not":
-				result += curBlock.getParameter();
-				break;
-			case "greaterThan":
-				result += curBlock.getParameter();
-				break;
-			case "lessThan":
-				result += curBlock.getParameter();
+			case "endwhile":
+				indentCounter--;
+				result = result.substring(0, result.lastIndexOf("\t")) + "}\n";
 				break;
 			default:
 				System.out.println("*** unrecognized block ***");
@@ -137,37 +146,27 @@ public class CodeBlockService {
 			}
 		}
 		
-		result += "\n\t}\n}";
+		result += "\t}\n}";
 		return result;
 	}
 	
 	public static void main(String[] args) {
 		List<CodeBlock> testList = new ArrayList<CodeBlock>();
 		
-		testList.add(new VarIntBlock("4"));
-		testList.add(new VarIntBlock("5"));
-		testList.add(new VarDoubleBlock("4.1"));
-		testList.add(new VarDoubleBlock("5.3"));
-		testList.add(new VarBoolBlock("true"));
-		testList.add(new VarCharBlock("g"));
-		testList.add(new VarStringBlock("this is a string"));
-		testList.add(new PrintBlock("Hello World"));
-		testList.add(new PrintBlock("int1"));
-		testList.add(new PrintBlock("double1"));
-		testList.add(new PrintBlock("bool1"));
-		testList.add(new PrintBlock("char1"));
-		testList.add(new PrintBlock("string1"));
-		testList.add(new PrintBlock("int10"));
-		/*
-		testList.add(new OpAddBlock());
-		testList.add(new OpSubBlock());
-		testList.add(new OpMultBlock());
-		testList.add(new OpDivBlock());
-		testList.add(new OpAndBlock());
-		testList.add(new OpOrBlock());
-		testList.add(new OpNotBlock());
-		testList.add(new OpEqualsBlock());
-		*/
+		testList.add(new PrintBlock("hello world"));
+		testList.add(new WhileLoopBlock("true"));
+		testList.add(new PrintBlock("in while loop"));
+		testList.add(new ForLoopBlock("5"));
+		testList.add(new IfBlock("condition"));
+		testList.add(new PrintBlock("inside if"));
+		testList.add(new EndIfBlock());
+		testList.add(new ElseBlock());
+		testList.add(new PrintBlock("inside else"));
+		testList.add(new EndElseBlock());
+		testList.add(new EndForBlock());
+		testList.add(new EndWhileBlock());
+		testList.add(new PrintBlock("outside all"));
+		
 		
 		System.out.println(translateCodeBlocks(testList));
 	}

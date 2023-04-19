@@ -10,7 +10,7 @@ public class VarStringBlock extends CodeBlock{
 	}
 	
 	public VarStringBlock(String parameter) {
-		super("string","String ",parameter,";","");
+		super("string","String ","\"" + parameter + "\"",";","");
 	}
 
 }

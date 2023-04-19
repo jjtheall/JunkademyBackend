@@ -6,8 +6,8 @@ public class IfBlock extends CodeBlock{
 		super("if","if(","","){","}");
 	}
 	
-	public IfBlock(String parameter, String executable) {
-		super("if","if(",parameter,"){",executable + "}");
+	public IfBlock(String parameter) {
+		super("if","if(",parameter,"){","");
 	}
 
 }

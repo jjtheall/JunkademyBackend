@@ -7,12 +7,7 @@ public class CodeBlockService {
 
 	public CodeBlockService() {}
 	
-	//TODO: remove static from translateCodeBlocks
-	//		remove main function
-	//		refactor operators in switch
-	//		code multiline blocks
-	
-	public static String translateCodeBlocks(List<CodeBlock> codeBlocks) {
+	public String translateCodeBlocks(List<CodeBlock> codeBlocks) {
 		//algorithm for converting blocks to text file
 		String result = "public class App {\n\tpublic static void main(String[] args) {\n";
 		
@@ -148,26 +143,5 @@ public class CodeBlockService {
 		
 		result += "\t}\n}";
 		return result;
-	}
-	
-	public static void main(String[] args) {
-		List<CodeBlock> testList = new ArrayList<CodeBlock>();
-		
-		testList.add(new PrintBlock("hello world"));
-		testList.add(new WhileLoopBlock("true"));
-		testList.add(new PrintBlock("in while loop"));
-		testList.add(new ForLoopBlock("5"));
-		testList.add(new IfBlock("condition"));
-		testList.add(new PrintBlock("inside if"));
-		testList.add(new EndIfBlock());
-		testList.add(new ElseBlock());
-		testList.add(new PrintBlock("inside else"));
-		testList.add(new EndElseBlock());
-		testList.add(new EndForBlock());
-		testList.add(new EndWhileBlock());
-		testList.add(new PrintBlock("outside all"));
-		
-		
-		System.out.println(translateCodeBlocks(testList));
 	}
 }

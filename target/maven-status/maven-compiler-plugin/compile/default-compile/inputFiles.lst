@@ -1,13 +1,16 @@
 /Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/OpSubBlock.java
 /Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/VarStringBlock.java
 /Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/ElseBlock.java
+/Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/VarDoubleBlock.java
 /Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/PrintBlock.java
 /Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/OpNotBlock.java
+/Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/EndIfBlock.java
 /Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/UserClassService.java
 /Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/OpDivBlock.java
 /Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/OpLessBlock.java
 /Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/OpMultBlock.java
 /Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/CodeBlock.java
+/Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/EndForBlock.java
 /Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/UserClass.java
 /Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/UserLoginDTO.java
 /Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/UserClassController.java
@@ -21,7 +24,10 @@
 /Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/UserClassRepo.java
 /Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/WhileLoopBlock.java
 /Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/OpOrBlock.java
+/Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/EndWhileBlock.java
 /Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/IfBlock.java
+/Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/ForLoopBlock.java
 /Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/JunkademyApplication.java
 /Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/VarIntBlock.java
+/Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/EndElseBlock.java
 /Users/jacktheall/Documents/SENIOR YEAR/SP23/CSC492/Junkademy Backend/junkademy/src/main/java/com/csc492/OpEqualsBlock.java

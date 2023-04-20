@@ -64,61 +64,61 @@ public class CodeBlockController {
 		
 		for(int i=0; i<codeBlockDTOs.size(); i++) {
 			CodeBlockDTO curBlockDTO = codeBlockDTOs.get(i);
-			//System.out.println(curBlockDTO.getId() + " - " + curBlockDTO.getParam());
-			switch(curBlockDTO.getId()) {
-			case "print":
-				PrintBlock newPrintBlock = new PrintBlock(curBlockDTO.getParam());
+			//System.out.println(curBlockDTO.getId() + " - " + curBlockDTO.getBlockValue());
+			switch(curBlockDTO.getName()) {
+			case "Print":
+				PrintBlock newPrintBlock = new PrintBlock(curBlockDTO.getBlockValue());
 				codeBlocks.add(newPrintBlock);
 				break;
-			case "int":
-				VarIntBlock newIntBlock = new VarIntBlock(curBlockDTO.getParam());
+			case "Integer":
+				VarIntBlock newIntBlock = new VarIntBlock(curBlockDTO.getBlockValue());
 				codeBlocks.add(newIntBlock);
 				break;
-			case "double":
-				VarDoubleBlock newDoubleBlock = new VarDoubleBlock(curBlockDTO.getParam());
+			case "Double":
+				VarDoubleBlock newDoubleBlock = new VarDoubleBlock(curBlockDTO.getBlockValue());
 				codeBlocks.add(newDoubleBlock);
 				break;
-			case "bool":
-				VarBoolBlock newBoolBlock = new VarBoolBlock(curBlockDTO.getParam());
+			case "Boolean":
+				VarBoolBlock newBoolBlock = new VarBoolBlock(curBlockDTO.getBlockValue());
 				codeBlocks.add(newBoolBlock);
 				break;
-			case "char":
-				VarCharBlock newCharBlock = new VarCharBlock(curBlockDTO.getParam());
+			case "Character":
+				VarCharBlock newCharBlock = new VarCharBlock(curBlockDTO.getBlockValue());
 				codeBlocks.add(newCharBlock);
 				break;
-			case "string":
-				VarStringBlock newStringBlock = new VarStringBlock(curBlockDTO.getParam());
+			case "String":
+				VarStringBlock newStringBlock = new VarStringBlock(curBlockDTO.getBlockValue());
 				codeBlocks.add(newStringBlock);
 				break;
-			case "if":
-				IfBlock newIfBlock = new IfBlock(curBlockDTO.getParam());
+			case "If":
+				IfBlock newIfBlock = new IfBlock(curBlockDTO.getBlockValue());
 				codeBlocks.add(newIfBlock);
 				break;
-			case "else":
-				ElseBlock newElseBlock = new ElseBlock(curBlockDTO.getParam());
+			case "Else":
+				ElseBlock newElseBlock = new ElseBlock(curBlockDTO.getBlockValue());
 				codeBlocks.add(newElseBlock);
 				break;
-			case "for":
-				ForLoopBlock newForLoopBlock = new ForLoopBlock(curBlockDTO.getParam());
+			case "For Loop":
+				ForLoopBlock newForLoopBlock = new ForLoopBlock(curBlockDTO.getBlockValue());
 				codeBlocks.add(newForLoopBlock);
 				break;
-			case "while":
-				WhileLoopBlock newWhileLoopBlock = new WhileLoopBlock(curBlockDTO.getParam());
+			case "While Loop":
+				WhileLoopBlock newWhileLoopBlock = new WhileLoopBlock(curBlockDTO.getBlockValue());
 				codeBlocks.add(newWhileLoopBlock);
 				break;
-			case "endif":
+			case "End If":
 				EndIfBlock newEndIfBlock = new EndIfBlock();
 				codeBlocks.add(newEndIfBlock);
 				break;
-			case "endelse":
+			case "End Else":
 				EndElseBlock newEndElseBlock = new EndElseBlock();
 				codeBlocks.add(newEndElseBlock);
 				break;
-			case "endfor":
+			case "End For Loop":
 				EndForBlock newEndForBlock = new EndForBlock();
 				codeBlocks.add(newEndForBlock);
 				break;
-			case "endwhile":
+			case "End While Loop":
 				EndWhileBlock newEndWhileBlock = new EndWhileBlock();
 				codeBlocks.add(newEndWhileBlock);
 				break;

@@ -2,32 +2,34 @@ package com.csc492;
 
 public class CodeBlockDTO {
 	
-	private String id;
-	private String param;
+	private String name;
+	private String blockValue;
 	
 	public CodeBlockDTO() {
 		super();
 	}
 	
-	public CodeBlockDTO(String id, String param) {
-		this.id = id;
-		this.param = param;
+	public CodeBlockDTO(String name, String blockValue) {
+		this.name = name;
+		this.blockValue = blockValue;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getBlockValue() {
+		return blockValue;
+	}
+
+	public void setBlockValue(String blockValue) {
+		this.blockValue = blockValue;
 	}
 	
-	public String getId() {
-		return id;
-	}
 	
-	public String getParam() {
-		return param;
-	}
-	
-	public void setId(String id) {
-		this.id = id;
-	}
-	
-	public void setParam(String param) {
-		this.param = param;
-	}
 
 }

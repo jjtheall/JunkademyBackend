@@ -1,59 +1,59 @@
 package com.csc492;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+//import jakarta.persistence.Column;
+//import jakarta.persistence.Entity;
+//import jakarta.persistence.Id;
+//import jakarta.persistence.Table;
 
-@Entity
-@Table(name="users")
+//@Entity
+//@Table(name="users")
 public class UserClass {
 
     //Instance variables
-	@Id
-    @Column(name = "username", nullable = false)
+//	@Id
+//    @Column(name = "username", nullable = false)
     private String username;
 
-    @Column(name = "password", nullable = false)
+//    @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "admin", nullable = false)
+//    @Column(name = "admin", nullable = false)
     private boolean admin;
 
-    @Column(name = "basicChal1", nullable = false)
+//    @Column(name = "basicChal1", nullable = false)
     private boolean basicChal1;
 
-    @Column(name = "basicChal2", nullable = false)
+//    @Column(name = "basicChal2", nullable = false)
     private boolean basicChal2;
 
-    @Column(name = "basicChal3", nullable = false)
+//    @Column(name = "basicChal3", nullable = false)
     private boolean basicChal3;
 
-    @Column(name = "stringChal1", nullable = false)
+//    @Column(name = "stringChal1", nullable = false)
     private boolean stringChal1;
 
-    @Column(name = "stringChal2", nullable = false)
+//    @Column(name = "stringChal2", nullable = false)
     private boolean stringChal2;
 
-    @Column(name = "stringChal3", nullable = false)
+//    @Column(name = "stringChal3", nullable = false)
     private boolean stringChal3;
 
-    @Column(name = "arrayChal1", nullable = false)
+//    @Column(name = "arrayChal1", nullable = false)
     private boolean arrayChal1;
 
-    @Column(name = "arrayChal2", nullable = false)
+//    @Column(name = "arrayChal2", nullable = false)
     private boolean arrayChal2;
 
-    @Column(name = "arrayChal3", nullable = false)
+//    @Column(name = "arrayChal3", nullable = false)
     private boolean arrayChal3;
 
-    @Column(name = "boolChal1", nullable = false)
+//    @Column(name = "boolChal1", nullable = false)
     private boolean boolChal1;
 
-    @Column(name = "boolChal2", nullable = false)
+//    @Column(name = "boolChal2", nullable = false)
     private boolean boolChal2;
 
-    @Column(name = "boolChal3", nullable = false)
+//    @Column(name = "boolChal3", nullable = false)
     private boolean boolChal3;
 
 
